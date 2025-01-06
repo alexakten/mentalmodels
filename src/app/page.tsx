@@ -32,7 +32,7 @@ const mentalModels = [
 
 export default function Home() {
   return (
-    <main className="bg-zinc-50 pt-24 flex flex-col items-center w-screen">
+    <main className="bg-zinc-50 pt-24 px-4 flex flex-col items-center w-screen">
       <section className="w-full max-w-2xl">
         <h1 className="font-bold text-5xl">🧠 99 Mental Models</h1>
         <h2 className="text-2xl mt-2 opacity-50">
