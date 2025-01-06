@@ -1,6 +1,6 @@
 export const mentalModels = [
   {
-    emoji: "🧪",
+    emoji: "🧩",
     name: "First Principles Thinking",
     summary: "Break everything down to the basics.",
     definition:
@@ -962,5 +962,26 @@ export const mentalModels = [
     example:
       "Rare, but used to illustrate how drastically perception can be skewed by mental processes.",
     tags: ["Psychology", "Biology"],
+  },
+
+  {
+    emoji: "🌱",
+    name: "Growth Mindset",
+    summary: "Abilities can be developed with effort.",
+    definition:
+      "The belief that skills and intelligence can be improved through dedication and hard work, rather than being fixed traits.",
+    example:
+      "Learning to code is difficult at first, but believing you can improve with consistent practice leads to success.",
+    tags: ["Psychology", "Education"],
+  },
+  {
+    emoji: "⚗️",
+    name: "Serendipity",
+    summary: "Discoveries made by chance.",
+    definition:
+      "The occurrence of unexpected but beneficial discoveries when you're pursuing something else.",
+    example:
+      "While trying to invent synthetic rubber, scientists accidentally created Silly Putty.",
+    tags: ["Science", "Creativity"],
   },
 ];

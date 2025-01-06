@@ -36,20 +36,22 @@ export const TAG_COLORS: Record<string, string> = {
 };
 
 export default function Model({
+  index,
   emoji,
   name,
   summary,
   definition,
   example,
-  tags,
+  // tags,
   className = "",
 }: {
+  index: number;
   emoji: string;
   name: string;
   summary: string;
   definition: string;
   example: string;
-  tags: string[];
+  // tags: string[];
   className?: string;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -65,10 +67,15 @@ export default function Model({
         <aside className="bg-zinc-100 shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center">
           <p className="text-2xl md:text-3xl">{emoji}</p>
         </aside>
-        <div>
-          <h3 className="font-bold text-lg md:text-2xl">{name}</h3>
+        <div className="w-full">
+          <div className="flex w-full  justify-between">
+            <h3 className="font-bold text-lg md:text-2xl">{name}</h3>
+            <p className="text-xs text-black font-medium bg-zinc-50 rounded-full w-6 h-6 shrink-0 flex items-center justify-center text-opacity-25">
+              {index + 1}
+            </p>
+          </div>
           <p className="mt-1 text-sm md:text-lg opacity-50">{summary}</p>
-          <div className="flex flex-wrap gap-4 mt-2">
+          {/* <div className="flex flex-wrap gap-4 mt-2">
             {tags.map((tag) => (
               <span
                 key={tag}
@@ -79,7 +86,7 @@ export default function Model({
                 #{tag}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
       <motion.div

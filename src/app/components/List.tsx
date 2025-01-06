@@ -17,6 +17,7 @@ export default function ModelsList({
       {models.map((model, index) => (
         <Model
           key={index}
+          index={index}
           emoji={model.emoji}
           name={model.name}
           summary={model.summary}
@@ -25,10 +26,10 @@ export default function ModelsList({
           tags={model.tags}
           className={
             index === 0
-              ? "rounded-t-2xl"
+              ? "rounded-t-2xl" // Round top corners for the first element
               : index === models.length - 1
-              ? "rounded-b-2xl border-none"
-              : ""
+              ? "rounded-b-2xl border-none" // Round bottom corners for the last element and remove bottom border
+              : "" // No additional rounding for middle elements
           }
         />
       ))}
