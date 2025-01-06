@@ -26,7 +26,7 @@ export default function ModelsList({
   };
 
   return (
-    <div>
+    <div className="overflow-hidden bg-white border border-black border-opacity-10 rounded-2xl">
       {models.map((model, index) => (
         <Model
           key={index}
@@ -37,6 +37,13 @@ export default function ModelsList({
           example={model.example}
           isExpanded={expandedStates[index]}
           onToggle={() => toggleModel(index)}
+          className={
+            index === 0
+              ? "rounded-t-2xl" // Round top corners for the first element
+              : index === models.length - 1
+              ? "rounded-b-2xl border-none" // Round bottom corners for the last element and remove bottom border
+              : "" // No additional rounding for middle elements
+          }
         />
       ))}
     </div>
