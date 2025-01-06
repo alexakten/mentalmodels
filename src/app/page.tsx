@@ -1,6 +1,6 @@
 import List from "./components/List";
 import { mentalModels } from "./components/Data";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <main className="bg-zinc-50 text-zinc-800 py-24 px-4 flex flex-col items-center w-screen">
@@ -21,6 +21,12 @@ export default function Home() {
       </section>
       <section className="mt-16 w-full max-w-2xl">
         <List models={mentalModels} />
+      </section>
+
+      <section className="mt-16 w-full max-w-2xl">
+        <p className="font-medium opacity-50">
+          🧑🏽‍💻 Built by <Link className="underline" href="https://alexakten.com">Alex</Link>
+        </p>
       </section>
     </main>
   );
