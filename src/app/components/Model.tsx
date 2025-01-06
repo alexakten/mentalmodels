@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { motion } from "motion/react";
 
 export default function Model({
@@ -6,8 +9,6 @@ export default function Model({
   summary,
   definition,
   example,
-  isExpanded,
-  onToggle,
   className = "",
 }: {
   emoji: string;
@@ -15,14 +16,16 @@ export default function Model({
   summary: string;
   definition: string;
   example: string;
-  isExpanded: boolean;
-  onToggle: () => void;
-  className?: string; // Added className as an optional prop
+  className?: string;
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpansion = () => setIsExpanded((prev) => !prev);
+
   return (
     <motion.div
       className={`border-b bg-white border-black border-opacity-10 py-8 px-4 cursor-pointer ${className}`}
-      onClick={onToggle}
+      onClick={toggleExpansion}
     >
       <div className="flex md:flex-row flex-col gap-4">
         <aside className="bg-zinc-100 shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center">
@@ -43,7 +46,7 @@ export default function Model({
         transition={{ duration: 0.1, ease: "easeInOut" }}
         className="overflow-hidden pl-0 md:pr-12 md:pl-20 flex flex-col"
       >
-        <p className=" text-xs md:text-sm mt-8 font-bold opacity-25">
+        <p className="text-xs md:text-sm mt-8 font-bold opacity-25">
           DEFINITION
         </p>
         <p className="mt-2 text-sm md:text-lg">{definition}</p>
