@@ -63,14 +63,20 @@ export default function Model({
       className={`border-b bg-white border-black border-opacity-10 py-4 md:py-8 px-4 cursor-pointer ${className}`}
       onClick={toggleExpansion}
     >
-      <div className="flex md:flex-row flex-col gap-4">
-        <aside className="bg-zinc-100 shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center">
-          <p className="text-2xl md:text-3xl">{emoji}</p>
-        </aside>
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex justify-between">
+          <aside className="bg-zinc-100 shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center">
+            <p className="text-2xl md:text-3xl">{emoji}</p>
+          </aside>
+          <p className="flex text-xs text-black font-medium bg-zinc-50 rounded-full w-6 h-6 shrink-0 md:hidden items-center justify-center text-opacity-25">
+            {index + 1}
+          </p>
+        </div>
         <div className="w-full">
-          <div className="flex w-full  justify-between">
+          <div className="flex w-full justify-between">
+            {/* <h3 className="font-bold text-lg md:text-2xl">{index + 1}{". "}{name}</h3> */}
             <h3 className="font-bold text-lg md:text-2xl">{name}</h3>
-            <p className="text-xs text-black font-medium bg-zinc-50 rounded-full w-6 h-6 shrink-0 flex items-center justify-center text-opacity-25">
+            <p className="md:flex text-xs text-black font-medium bg-zinc-50 rounded-full w-6 h-6 shrink-0 hidden items-center justify-center text-opacity-25">
               {index + 1}
             </p>
           </div>
