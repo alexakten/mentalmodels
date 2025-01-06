@@ -99,11 +99,11 @@ export default function Model({
         transition={{ duration: 0.1, ease: "easeInOut" }}
         className="overflow-hidden pl-0 md:pr-12 md:pl-20 flex flex-col"
       >
-        <p className="text-xs md:text-sm mt-8 font-bold opacity-25">
+        <p className="text-xs md:text-sm mt-8 font-bold opacity-30">
           DEFINITION
         </p>
         <p className="mt-2 text-sm md:text-lg">{definition}</p>
-        <p className="text-xs md:text-sm mt-8 font-bold opacity-25">EXAMPLE</p>
+        <p className="text-xs md:text-sm mt-8 font-bold opacity-30">EXAMPLE</p>
         <p className="mt-2 text-sm md:text-lg">{example}</p>
       </motion.div>
     </motion.div>
