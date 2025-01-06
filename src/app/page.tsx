@@ -1,101 +1,53 @@
-import Image from "next/image";
+import List from "./components/List";
+
+const mentalModels = [
+  {
+    emoji: "🧪",
+    name: "First Principles Thinking",
+    summary: "Breaking down problems into their fundamental parts.",
+    definition:
+      "First Principles Thinking involves deconstructing a problem into its basic truths and reasoning up from there, enabling innovative solutions.",
+    example:
+      "When faced with a problem, first principles thinking involves breaking it down into its fundamental components, such as the basic principles of physics or the fundamental principles of a business. By starting with these basic truths, you can develop a more comprehensive understanding of the problem and create innovative solutions that are not limited by existing assumptions or constraints.",
+  },
+  {
+    emoji: "📊",
+    name: "The Pareto Principle",
+    summary: "80% of outcomes come from 20% of inputs.",
+    definition:
+      "The Pareto Principle suggests focusing on the few inputs that yield the most significant results, often applied in productivity and business.",
+    example:
+      "The Pareto Principle can be applied to many areas of life, such as productivity, business, and personal finance. For example, if you spend 80% of your time on 20% of your tasks, you can focus on those tasks and delegate the rest to others. This can help you achieve more in less time and improve your overall productivity.",
+  },
+  {
+    emoji: "🔄",
+    name: "Inversion",
+    summary: "Think backwards to avoid failure.",
+    definition:
+      "Inversion involves thinking about what you want to avoid or what could go wrong to ensure success by planning against negative outcomes.",
+    example:
+      "Inversion can be applied to many areas of life, such as business, personal finance, and relationships. For example, if you want to avoid failure in a business, you can think about what could go wrong and plan against it. This can help you avoid common pitfalls and ensure your success.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main className="bg-zinc-50 pt-24 flex flex-col items-center w-screen">
+      <section className="w-full max-w-2xl">
+        <h1 className="font-bold text-5xl">🧠 99 Mental Models</h1>
+        <h2 className="text-2xl mt-2 opacity-50">
+          Principles to help you think better.
+        </h2>
+        <h2 className="text-lg mt-8">
+          <span className="font-bold">99 Mental Models</span> is a curated list
+          of mental models based on principles from mathematics, physics,
+          economics, and philosophy. These models have helped great thinkers
+          such as Elon Musk, Ray Dalio, and Sam Altman make better decisions.
+        </h2>
+      </section>
+      <section className="mt-24 w-full max-w-2xl">
+        <List models={mentalModels} />
+      </section>
+    </main>
   );
 }
