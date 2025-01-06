@@ -60,7 +60,7 @@ export default function Model({
 
   return (
     <motion.div
-      className={`border-b bg-white border-black border-opacity-10 py-8 px-4 cursor-pointer ${className}`}
+      className={`border-b bg-white border-black border-opacity-10 py-4 md:py-8 px-4 cursor-pointer ${className}`}
       onClick={toggleExpansion}
     >
       <div className="flex md:flex-row flex-col gap-4">
