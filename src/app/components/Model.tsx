@@ -3,12 +3,45 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
+export const TAG_COLORS: Record<string, string> = {
+  Psychology: "text-blue-700",
+  Economics: "text-green-700",
+  Biology: "text-purple-700",
+  Physics: "text-yellow-700",
+  Mathematics: "text-red-700",
+  Productivity: "text-pink-700",
+  Philosophy: "text-teal-700",
+  "Decision-Making": "text-gray-700",
+  Business: "text-indigo-700",
+  Strategy: "text-blue-700",
+  "Game Theory": "text-orange-700",
+  Sociology: "text-blue-700",
+  "Environmental Science": "text-green-700",
+  "Risk Management": "text-red-700",
+  "Behavioral Economics": "text-green-700",
+  "Chaos Theory": "text-purple-700",
+  Finance: "text-blue-700",
+  Marketing: "text-yellow-700",
+  Education: "text-pink-700",
+  Statistics: "text-orange-700",
+  "Problem-Solving": "text-indigo-700",
+  "Self-Control": "text-rose-700",
+  Engineering: "text-gray-700",
+  Communication: "text-sky-700",
+  Planning: "text-lime-700",
+  "Group Dynamics": "text-stone-700",
+  Media: "text-amber-700",
+  Design: "text-fuchsia-700",
+  Metaphor: "text-cyan-700",
+};
+
 export default function Model({
   emoji,
   name,
   summary,
   definition,
   example,
+  tags,
   className = "",
 }: {
   emoji: string;
@@ -16,6 +49,7 @@ export default function Model({
   summary: string;
   definition: string;
   example: string;
+  tags: string[];
   className?: string;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -34,6 +68,18 @@ export default function Model({
         <div>
           <h3 className="font-bold text-lg md:text-2xl">{name}</h3>
           <p className="mt-1 text-sm md:text-lg opacity-50">{summary}</p>
+          <div className="flex flex-wrap gap-4 mt-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className={`text-xs opacity-80 font-semibold ${
+                  TAG_COLORS[tag] || "text-gray-800"
+                }`}
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
       <motion.div

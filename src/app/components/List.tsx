@@ -9,6 +9,7 @@ export default function ModelsList({
     summary: string;
     definition: string;
     example: string;
+    tags: string[];
   }[];
 }) {
   return (
@@ -21,6 +22,7 @@ export default function ModelsList({
           summary={model.summary}
           definition={model.definition}
           example={model.example}
+          tags={model.tags}
           className={
             index === 0
               ? "rounded-t-2xl"
