@@ -40,9 +40,10 @@ export default function Home() {
         </h2>
         <h2 className="text-sm md:text-lg mt-8">
           <span className="font-bold">99 Mental Models</span> is a curated list
-          of mental models based on principles from mathematics, physics,
-          economics, and philosophy. These models have helped great thinkers
-          such as Elon Musk, Ray Dalio, and Sam Altman make better decisions.
+          of mental models based on principles from various disciplines such as
+          mathematics, physics, economics, and philosophy. These models have
+          helped countless great thinkers throughout history make better
+          decisions.
         </h2>
       </section>
       <section className="mt-16 w-full max-w-2xl">
