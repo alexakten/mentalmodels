@@ -36,7 +36,7 @@ export default function Home() {
       <section className="w-full max-w-2xl">
         <h1 className="font-bold text-3xl md:text-5xl">🧠 99 Mental Models</h1>
         <h2 className="text-lg md:text-2xl mt-2 opacity-50">
-          Principles to help you think better.
+          Principles to guide your thinking.
         </h2>
         <h2 className="text-sm md:text-lg mt-8">
           <span className="font-bold">99 Mental Models</span> is a curated list
