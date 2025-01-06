@@ -9,7 +9,7 @@ export default function Home() {
         <h2 className="text-lg md:text-2xl mt-2 opacity-50">
           Principles to Guide your Thinking.
         </h2>
-        <h2 className="text-sm md:text-lg mt-8">
+        <h2 className="text-base md:text-lg mt-8">
           <span className="font-bold">99 Mental Models</span> is a curated list
           of mental models based on principles from various disciplines such as
           mathematics, physics, economics, and philosophy.
