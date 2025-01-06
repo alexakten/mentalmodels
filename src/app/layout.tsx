@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "99 Mental Models",
-  description: "Mental Models to Guide Your Thinking",
+  description: "Principles to Guide your Thinking.",
 };
 
 export default function RootLayout({
