@@ -1,3 +1,4 @@
+// No "use client" here
 import Model from "./Model";
 
 export default function ModelsList({
@@ -9,7 +10,6 @@ export default function ModelsList({
     summary: string;
     definition: string;
     example: string;
-    // tags: string[];
   }[];
 }) {
   return (
@@ -23,13 +23,12 @@ export default function ModelsList({
           summary={model.summary}
           definition={model.definition}
           example={model.example}
-          // tags={model.tags}
           className={
             index === 0
-              ? "rounded-t-2xl" // Round top corners for the first element
+              ? "rounded-t-2xl"
               : index === models.length - 1
-              ? "rounded-b-2xl border-none" // Round bottom corners for the last element and remove bottom border
-              : "" // No additional rounding for middle elements
+              ? "rounded-b-2xl border-none"
+              : ""
           }
         />
       ))}
