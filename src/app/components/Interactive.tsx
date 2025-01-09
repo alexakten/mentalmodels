@@ -31,9 +31,9 @@ export default function InteractiveModelsList({
     <div>
       <button
         onClick={shuffleModels}
-        className="mb-4 flex items-center gap-2 px-4 py-2 border border-zinc-200 rounded-full hover:bg-zinc-100"
+        className="mb-4 flex text-sm items-center gap-2 px-4 py-2 border border-zinc-200 rounded-full hover:bg-zinc-100"
       >
-        <DiceFive size={24} />
+        <DiceFive size={20} />
         Randomize
       </button>
 
