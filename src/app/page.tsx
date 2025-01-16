@@ -12,7 +12,7 @@ export default function Home() {
         </h2>
         <h2 className="text-base md:text-lg mt-8">
           <span className="font-bold">99 Mental Models</span> is a curated list
-          of mental models based on principles from various disciplines such as
+          of mental models based on principles from disciplines such as
           mathematics, physics, economics, and philosophy.
         </h2>
       </section>
